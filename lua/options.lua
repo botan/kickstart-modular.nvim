@@ -73,3 +73,11 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- vim: ts=2 sts=2 sw=2 et
+-- Set tab width to 2 spaces
+vim.opt.tabstop = 2
+-- Backspace/delete behaves as if tabs are 2 spaces
+vim.opt.softtabstop = 2
+-- Auto-indent uses 2 spaces
+vim.opt.shiftwidth = 2
+-- Convert tabs to spaces
+vim.opt.expandtab = true
