@@ -3,13 +3,20 @@ return {
   dependencies = {
     'neovim/nvim-lspconfig',
     'mfussenegger/nvim-dap',
-    'mfussenegger/nvim-dap-python', --optional
-    { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
+    'mfussenegger/nvim-dap-python',
+    {
+      'nvim-telescope/telescope.nvim',
+      branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' },
+    },
   },
+  branch = 'regexp',
   lazy = false,
-  branch = 'regexp', -- This is the regexp branch, use this for the new version
   config = function()
-    require('venv-selector').setup()
+    require('venv-selector').setup {
+      search_venv_managers = true,
+      search_workspace = true,
+    }
   end,
   keys = {
     { '<leader>sv', '<cmd>VenvSelect<cr>' },
