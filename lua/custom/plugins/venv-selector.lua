@@ -10,7 +10,7 @@ return {
       dependencies = { 'nvim-lua/plenary.nvim' },
     },
   },
-  branch = 'regexp',
+  branch = 'main',
   lazy = false,
   config = function()
     require('venv-selector').setup {
