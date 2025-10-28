@@ -4,6 +4,7 @@ return {
   event = 'InsertEnter',
   config = function()
     require('copilot').setup {
+      filetypes = { markdown = true },
       suggestion = { auto_trigger = true, keymap = { accept = '<C-a>' } },
     }
   end,
